@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alireza Jami</title>
+    <meta content="Alireza Jami is a full-stack web developer with experience in .NET, Python, and SQL Server. Currently live in Tehran, Iran." name="description" />
+    <meta content="Alireza Jami is a full-stack web developer with experience in .NET, Python, and SQL Server." property="og:title" />
+    <meta content="Alireza Jami is a full-stack web developer" property="og:description">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/b45c12884f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/images/logo.png" class="logo" alt="This is my website logo" />
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>.NET Developer</p>
+                <h1>Hi, I'm <span>Alireza</span> Jami<br />From Iran</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------- About --------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/user.png" alt="My Pictuer" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil labore distinctio quibusdam accusamus quam? Nisi provident mollitia quam expedita, non, quibusdam veritatis quisquam cum, eos nulla nam? Obcaecati, perspiciatis?
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>.Net Developer</span><br />Development Web Application
+                            </li>
+                            <li>
+                                <span>Web Developer</span><br />Development Web Application
+                            </li>
+                            <li>
+                                <span>App Development</span><br />Development Web Application
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2011 - current</span><br />Development Web Application
+                            </li>
+                            <li>
+                                <span>2011 - 2021</span><br />Development Web Application
+                            </li>
+                            <li>
+                                <span>2020 - 2022</span><br />Development Web Application
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br />Development Web Application</li>
+                            <li><span>2016</span><br />Development Web Application</li>
+                            <li><span>2014</span><br />Development Web Application</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------ Services -------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum est ex quod blanditiis nam! Voluptates laudantium possimus optio porro mollitia animi molestias explicabo sequi dignissimos. Odit inventore necessitatibus debitis.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum est ex quod blanditiis nam! Voluptates laudantium possimus optio porro mollitia animi molestias explicabo sequi dignissimos. Odit inventore necessitatibus debitis.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum est ex quod blanditiis nam! Voluptates laudantium possimus optio porro mollitia animi molestias explicabo sequi dignissimos. Odit inventore necessitatibus debitis.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------- Portfolio ------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/work-1.png" alt="" />
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere animi, cum labore excepturi saepe harum quod neque commodi omnis id consequatur dignissimos sapiente possimus qui. Delectus a qui magnam.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/work-2.png" alt="" />
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere animi, cum labore excepturi saepe harum quod neque commodi omnis id consequatur dignissimos sapiente possimus qui. Delectus a qui magnam.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/work-3.png" alt="" />
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere animi, cum labore excepturi saepe harum quod neque commodi omnis id consequatur dignissimos sapiente possimus qui. Delectus a qui magnam.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ------------------ Contacts ------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>kami.jami@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>(+98)9120453091</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/alireza-jami/"><i class="fab fa-linkedin"></i
+              ></a>
+                        <a href="https://github.com/kami-jami"><i class="fa-brands fa-square-github"></i></i
+              ></a>
+                        <a href="https://stackoverflow.com/users/5470587/alireza-jami"><i class="fa-brands fa-stack-overflow"></i></i
+              ></a>
+                        <a href="https://twitter.com/jami_alireza"><i class="fab fa-twitter-square"></i
+              ></a>
+                        <a href="https://www.instagram.com/kami.jami/"><i class="fab fa-instagram"></i
+              ></a>
+                        <a href="https://www.facebook.com/kamyar.jami/"><i class="fa-brands fa-square-facebook"></i></i
+              ></a>
+                    </div>
+                    <a href="/CV/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn btn2" type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2022 Alireza Jami</p>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/contactform.js"></script>
+</body>
+
+</html>

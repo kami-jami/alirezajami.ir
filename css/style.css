@@ -6,11 +6,14 @@
 }
 
 :root {
-    --primary-color: #ff004f;
-    --bg-color: #080808;
-    --text-color: #fff;
-    --text-secondary: #ababab;
-    --card-bg: #262626;
+    --primary-color: #00d2ff;
+    --secondary-color: #3a7bd5;
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --gradient-text: linear-gradient(to right, #00d2ff, #3a7bd5);
 }
 
 html {
@@ -20,18 +23,18 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(58, 123, 213, 0.1) 0%, transparent 20%);
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(/images/background.png);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url(/images/background.png);
     background-size: cover;
     background-position: center;
-}
-
-.container {
-    padding: 10px 10%;
+    background-attachment: fixed;
 }
 
 nav {
@@ -39,6 +42,24 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: var(--glass-border);
+    width: 100%;
+    padding: 15px 10%;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+/* Remove container padding from nav since it's now handled in nav itself for sticky effect */
+#header .container nav {
+    padding: 0;
 }
 
 .logo {
@@ -56,17 +77,24 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--gradient-text);
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
+    border-radius: 2px;
 }
 
 nav ul li a:hover::after {
@@ -74,17 +102,21 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 30px;
 }
 
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+    line-height: 1.2;
 }
 
 .header-text h1 span {
-    color: var(--primary-color);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
@@ -137,25 +169,28 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--gradient-text);
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
+    border-radius: 2px;
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
 }
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 15px 0;
+    font-size: 15px;
 }
 
 .tab-contents ul li span {
-    color: #b54769;
-    font-size: 14px;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .tab-contents {
@@ -183,20 +218,27 @@ nav ul li a:hover::after {
 .services-list div {
     background: var(--card-bg);
     padding: 40px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    border: var(--glass-border);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .services-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
@@ -206,11 +248,15 @@ nav ul li a:hover::after {
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .services-list div:hover {
-    background: var(--primary-color);
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    background: rgba(58, 123, 213, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 40px rgba(0, 210, 255, 0.2);
 }
 
 
@@ -228,14 +274,15 @@ nav ul li a:hover::after {
 }
 
 .work {
-    border-radius: 10px;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .work img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
     display: block;
     transition: transform 0.5s;
 }
@@ -243,8 +290,8 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--primary-color));
-    border-radius: 10px;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(0, 210, 255, 0.8));
+    border-radius: 20px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -257,11 +304,13 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
+    backdrop-filter: blur(3px);
 }
 
 .layer h3 {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .layer a {
@@ -275,6 +324,7 @@ nav ul li a:hover::after {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .work:hover img {
@@ -289,16 +339,20 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     padding: 14px 50px;
-    border-radius: 6px;
+    border-radius: 30px;
     text-decoration: none;
     color: var(--text-color);
-    transition: background 0.5s;
+    transition: all 0.4s;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
     background: var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+    transform: translateY(-3px);
 }
 
 
@@ -352,14 +406,22 @@ nav ul li a:hover::after {
 form input,
 form textarea {
     width: 100%;
-    border: 0;
+    border: var(--glass-border);
     outline: none;
     background: var(--card-bg);
     padding: 15px;
     margin: 15px 0;
     color: var(--text-color);
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    background: rgba(30, 41, 59, 0.9);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.1);
 }
 
 form .btn2 {
@@ -367,15 +429,25 @@ form .btn2 {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background: var(--gradient-text);
+    transition: all 0.4s;
+}
+
+form .btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
 }
 
 .copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: var(--card-bg);
+    background: rgba(15, 23, 42, 0.95);
     font-weight: 300;
     margin-top: 20px;
+    border-top: var(--glass-border);
 }
 
 
@@ -405,7 +477,8 @@ nav .fas {
     }
 
     nav ul {
-        background: var(--primary-color);
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
         position: fixed;
         top: 0;
         right: -200px;
@@ -414,6 +487,7 @@ nav .fas {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        border-left: var(--glass-border);
     }
 
     nav ul li {

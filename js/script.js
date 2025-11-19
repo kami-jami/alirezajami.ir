@@ -21,3 +21,17 @@ function openmenu() {
 function closemenu() {
     sidemenu.style.right = "-200px";
 }
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.row, .services-list, .work-list, .header-text');
+hiddenElements.forEach((el) => {
+    el.classList.add('hidden');
+    observer.observe(el);
+});

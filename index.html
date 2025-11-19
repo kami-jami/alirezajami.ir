@@ -9,15 +9,19 @@
     <meta content="Alireza Jami is a full-stack web developer with experience in .NET, Python, and SQL Server. Currently live in Tehran, Iran." name="description" />
     <meta content="Alireza Jami is a full-stack web developer with experience in .NET, Python, and SQL Server." property="og:title" />
     <meta content="Alireza Jami is a full-stack web developer" property="og:description">
+    <meta property="og:image" content="https://alirezajami.ir/images/user.png">
+    <meta property="og:url" content="https://alirezajami.ir">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://alirezajami.ir">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/b45c12884f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b45c12884f.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
-    <div id="header">
+    <header id="header">
         <div class="container">
             <nav>
-                <a href="http://alirezajami.ir"><img src="/images/logo.png" class="logo" alt="This is my website logo" /></a>
+                <a href="http://alirezajami.ir"><img src="/images/logo.png" class="logo" alt="Alireza Jami Logo" width="140" height="auto" /></a>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -33,14 +37,15 @@
                 <h1>Hi, I'm <span>Alireza</span> Jami<br />From Iran</h1>
             </div>
         </div>
-    </div>
+    </header>
 
+    <main>
     <!-- ----------------- About --------------------- -->
-    <div id="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="/images/user.png" alt="My Pictuer" />
+                    <img src="/images/user.png" alt="Alireza Jami" loading="lazy" />
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -125,9 +130,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- ------------------ Services -------------- -->
-    <div id="services">
+    <section id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
@@ -152,43 +157,43 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- ------------- Portfolio ------------- -->
-    <div id="portfolio">
+    <section id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="/images/work-1.png" alt="" />
+                    <img src="/images/work-1.png" alt="Microservices Project" loading="lazy" />
                     <div class="layer">
                         <h3>Microservices</h3>
                         <p>ASP.NET, Redis, Mongodb, PostgreSQL, RabbitMq, Docker, gRPC </p>
-                        <a href="https://github.com/kami-jami/AspnetMicroservices"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/kami-jami/AspnetMicroservices" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="/images/work-2.png" alt="" />
+                    <img src="/images/work-2.png" alt="Dating App Project" loading="lazy" />
                     <div class="layer">
                         <h3>Dating App</h3>
                         <p>Asp.net & Angular </p>
-                        <a href="https://github.com/kami-jami/DatingApp"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/kami-jami/DatingApp" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="/images/work-3.png" alt="" />
+                    <img src="/images/work-3.png" alt="Personal Tracking Project" loading="lazy" />
                     <div class="layer">
                         <h3>Personal Tracking</h3>
                         <p>C# Project</p>
-                        <a href="https://github.com/kami-jami/PersonalTracking"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/kami-jami/PersonalTracking" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
             <a href="#" class="btn">See more</a>
         </div>
-    </div>
+    </section>
 
     <!-- ------------------ Contacts ------------- -->
-    <div id="contact">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -196,18 +201,12 @@
                     <p><i class="fas fa-paper-plane"></i>kami.jami@gmail.com</p>
                     <p><i class="fas fa-phone-square-alt"></i>(+98)9120453091</p>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/alireza-jami/"><i class="fab fa-linkedin"></i
-              ></a>
-                        <a href="https://github.com/kami-jami"><i class="fa-brands fa-square-github"></i></i
-              ></a>
-                        <a href="https://stackoverflow.com/users/5470587/alireza-jami"><i class="fa-brands fa-stack-overflow"></i></i
-              ></a>
-                        <a href="https://twitter.com/jami_alireza"><i class="fab fa-twitter-square"></i
-              ></a>
-                        <a href="https://www.instagram.com/kami.jami/"><i class="fab fa-instagram"></i
-              ></a>
-                        <a href="https://www.facebook.com/kamyar.jami/"><i class="fa-brands fa-square-facebook"></i></i
-              ></a>
+                        <a href="https://www.linkedin.com/in/alireza-jami/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/kami-jami" aria-label="GitHub"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://stackoverflow.com/users/5470587/alireza-jami" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="https://twitter.com/jami_alireza" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/kami.jami/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/kamyar.jami/" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
                     </div>
                     <a href="/CV/Alireza-Jami-Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
@@ -222,12 +221,15 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright Ⓒ Alireza Jami 2022 - Portfolio</p>
-        </div>
-    </div>
-    <script src="/js/script.js"></script>
-    <script src="/js/contactform.js"></script>
+        <footer>
+            <div class="copyright">
+                <p>Copyright Ⓒ Alireza Jami 2022 - Portfolio</p>
+            </div>
+        </footer>
+    </section>
+    </main>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/contactform.js" defer></script>
 </body>
 
 </html>

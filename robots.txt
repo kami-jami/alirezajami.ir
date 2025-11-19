@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alirezajami.ir/sitemap.xml
